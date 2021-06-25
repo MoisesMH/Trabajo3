@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="15dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/tviCompNombre"
+        android:text="Hello"
+        />
+
+    <TextView
+        android:id="@+id/tviCompNroequipos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_below="@id/tviCompNombre"
+        android:text="Bye"/>
+
+</RelativeLayout>
