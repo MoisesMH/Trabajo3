@@ -5,11 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/dlaMain">
-
-    <FrameLayout
-        android:id="@+id/flaContent"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbaMain"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#AA12FF"
+            android:elevation="4dp"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            />
+        <FrameLayout
+            android:id="@+id/flaContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
     
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nviMain"

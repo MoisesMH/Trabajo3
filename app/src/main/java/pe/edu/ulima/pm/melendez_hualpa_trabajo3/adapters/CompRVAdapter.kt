@@ -31,11 +31,11 @@ class CompRVAdapter : RecyclerView.Adapter<CompRVAdapter.ViewHolder>{
 
     constructor(comps : ArrayList<Comp>,
                 listener : OnCompItemClickListener,
-                context : Context
+
     ) : super(){
         this.comps = comps
         this.listener = listener
-        this.context = context
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

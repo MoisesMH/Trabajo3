@@ -8,24 +8,38 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import pe.edu.ulima.pm.melendez_hualpa_trabajo3.R
+import pe.edu.ulima.pm.melendez_hualpa_trabajo3.adapters.CompRVAdapter
+import pe.edu.ulima.pm.melendez_hualpa_trabajo3.adapters.OnCompItemClickListener
 import pe.edu.ulima.pm.melendez_hualpa_trabajo3.models.beans.Comp
+import pe.edu.ulima.pm.melendez_hualpa_trabajo3.models.managers.CompsManager
+
 import java.util.ArrayList
 
-class CompFragment : Fragment(){
+class CompFragment : Fragment(), OnCompItemClickListener{
     var rviComp : RecyclerView? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_comp, container, false)
     }
 
-    @SuppressLint("UseRequireInsteadOfGet")
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        rviComp=view?.findViewById(R.id.rviComp)
+        val compsList=CompsManager.getInstance().getProducts()
+        val compsRV = CompRVAdapter(compsList, this)
+        rviComp!!.adapter=compsRV
 
-        rviComp = view!!.findViewById(R.id.rviComp)
+
+
+    }
+
+    override fun onClick(comp: Comp) {
+        Toast.makeText(context, comp.nombre, Toast.LENGTH_LONG).show()
+
     }
 
 
