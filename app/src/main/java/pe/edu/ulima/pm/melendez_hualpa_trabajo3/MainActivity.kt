@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             // TODO: Abrir el fragment correspondiente la opcion del menu
             // Cerrar la opcion del menu una vez que se selecciona un item
             dlaMain!!.closeDrawers()
+
             true
         }
 

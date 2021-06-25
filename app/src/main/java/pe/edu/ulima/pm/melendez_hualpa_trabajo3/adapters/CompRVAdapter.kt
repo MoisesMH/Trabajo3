@@ -24,7 +24,7 @@ class CompRVAdapter : RecyclerView.Adapter<CompRVAdapter.ViewHolder>{
             tviCompNroequipos = view.findViewById(R.id.tviCompNroequipos)
         }
     }
-
+//edgar
     private var comps : ArrayList<Comp>? = null
     private var listener : OnCompItemClickListener? = null
     private var context : Context? = null
